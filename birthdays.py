@@ -1,3 +1,5 @@
+# The goal of this module is to provide the birthday date of specific people
+
 birthdays = {
     'Albert Einstein': '03/14/1879',
     'Benjamin Franklin': '01/17/1706',
@@ -6,11 +8,20 @@ birthdays = {
     'Rowan Atkinson': '01/6/1955'}
 
 def print_birthdays():
+    '''
+    The function print_birthday returns the name of people whose birthday date
+    is in the list birthdays
+    '''
     print('Welcome to the birthday dictionary. We know the birthdays of these people:')
     for name in birthdays:
         print(name)
 
 def return_birthday(name):
+    '''
+    The function return_birthday returns the birthday date of the name provided
+    as input, if such name is present in the list birthdays. Otherwise, a
+    comment stating that such person's birthday is not available is returned.
+    '''
     if name in birthdays:
         print('{}\'s birthday is {}.'.format(name, birthdays[name]))
     else:
